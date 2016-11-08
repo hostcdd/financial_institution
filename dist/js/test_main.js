@@ -1,0 +1,1 @@
+require.config({paths:{jquery:"vendor/js/jquery.min"}});

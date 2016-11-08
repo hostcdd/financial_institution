@@ -1,0 +1,57 @@
+/* 定义变量 */
+/* 将变量应用到元素中 */
+#header {
+  color: #4d926f;
+}
+/* 变量计算 */
+#lessCompute {
+  color: #6c94be;
+}
+/* 定义一个变量名为变量(没效果) */
+/* 混入-Mixins */
+/* 混入其实就是一种嵌套，它充许你将一个类嵌入到另一个类中，而被嵌入的这个类也称为是一个变量 */
+/* 先定义一个类 */
+/* 将定义的类应用到另一个类中 */
+#lessMixins {
+  /* 给参数定义一个默认值,注意一定要有括号，就算没有参数也得要括号 */
+  border: 1px solid #253636;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+#lessMixinsVar {
+  /* 给参数定义一个默认值,注意一定要有括号，就算没有参数也得要括号 */
+  border: 1px solid #253636;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* 给minxin类传入参数 */
+}
+/* Mixins的arguments变量,类似js里的arguments */
+#lessMixinsArgs {
+  border: 1px solid #253636;
+  -moz-box-shadow: 2px 2px 3px #f36;
+  -webkit-box-shadow: 2px 2px 3px #f36;
+  box-shadow: 2px 2px 3px #f36;
+}
+/* less中的嵌套 */
+#testNesting {
+  display: inline;
+  float: left;
+}
+#testNesting h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+#testNesting h1 a {
+  text-decoration: none;
+  color: #f36;
+  /* 如果要在元素上加伪类或伪元素，就要在里面加上& */
+}
+#testNesting h1 a:hover {
+  text-decoration: underline;
+  color: #63f;
+}
+#testNesting p {
+  font-size: 12px;
+}
