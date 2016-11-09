@@ -29,11 +29,9 @@ var gulp = require('gulp'), //本地安装gulp所用到的地方
 	
 var globs = {
     jsmin:'src/js/*.js',
-    jsModulemin:'src/js/module/*.js',
     testPngquant:'src/images/*',
 	testLess:"src/less/*.less",
-	testHtmlmin:"src/html/*",
-    testHtmlTplmin:"src/html/tpl/*"
+	testHtmlmin:"src/html/*"
 };
 
 gulp.task('webserver', function() {
@@ -62,18 +60,6 @@ gulp.task('jsmin', function () {
 		}))
         .pipe(gulp.dest('dist/js'))
 		.pipe(livereload());
-});
-gulp.task('jsmin2', function () {
-    gulp.src(['src/js/module/*.js'])
-        .pipe(uglify({
-            //mangle: true,//类型：Boolean 默认：true 是否修改变量名
-            mangle: false,
-            //mangle: {except: ['require' ,'exports' ,'module' ,'$']},//排除混淆关键字
-            compress: true,//类型：Boolean 默认：true 是否完全压缩
-            preserveComments: 'all' //保留所有注释
-        }))
-        .pipe(gulp.dest('dist/js/module'))
-        .pipe(livereload());
 });
 
 //使用gulp-concat合并javascript文件，减少网络请求。
@@ -146,22 +132,6 @@ gulp.task('testHtmlmin', function(){
 		.pipe(gulp.dest('dist/html'))
         .pipe(livereload());
 });
-gulp.task('testHtmlTplmin', function(){
-    var opts = {
-        removeComments: true,//清除HTML注释
-        collapseWhitespace: true,//压缩HTML
-        collapseBooleanAttributes: true,//省略布尔属性的值 <input checked="true"/> ==> <input />
-        removeEmptyAttributes: true,//删除所有空格作属性值 <input id="" /> ==> <input />
-        removeScriptTypeAttributes: true,//删除<script>的type="text/javascript"
-        removeStyleLinkTypeAttributes: true,//删除<style>和<link>的type="text/css"
-        minifyJS: true,//压缩页面JS
-        minifyCSS: true//压缩页面CSS
-    };
-    gulp.src('src/html/tpl/*.html')
-        .pipe(htmlmin(opts))
-        .pipe(gulp.dest('dist/html/tpl'))
-        .pipe(livereload());
-});
 
 // 当监听文件发生变化时，浏览器自动刷新页面
 gulp.task('less', function() {
@@ -179,20 +149,18 @@ gulp.task('sassfile',function(){
 		.pipe(livereload());;
 });
 
-gulp.task('build', ['testLess','jsmin','jsmin2','testPngquant','testRev','testHtmlmin','testHtmlTplmin']);
+gulp.task('build', ['testLess','jsmin','testPngquant','testRev','testHtmlmin']);
 gulp.task('watch', ['build'], function () {
     // 监听有改变自动刷新浏览器
 	livereload.listen();
 	
     gulp.watch(globs.jsmin, ['jsmin']);
-    gulp.watch(globs.jsModulemin, ['jsmin2']);
 
     gulp.watch(globs.testLess, ['testLess']);
 
     gulp.watch(globs.testPngquant, ['testPngquant']);
 		
 	gulp.watch(globs.testHtmlmin, ['testHtmlmin']);
-    gulp.watch(globs.testHtmlTplmin, ['testHtmlTplmin']);
 
     
 });

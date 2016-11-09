@@ -1,4 +1,1 @@
-/**
- * Created by Administrator on 2016/6/21.
- */
-define(function(){require.config({waitSeconds:0,baseUrl:"js",paths:{jquery:"../../js/vendor/jquery.min",bootstrap:"../../js/vendor/bootstrap.min",mustache:"../../js/vendor/mustache.min",public:"../../js/common/public",entAccount:"../../js/module/entAccount",validate:"../../js/common/validate",api:"../../js/common/api",hash:"../../js/vendor/hash"},shim:{bootstrap:{deps:["jquery"],exports:"bootstrap"},hash:{deps:["jquery"],exports:"hash"}}}),require(["jquery","mustache","public","entAccount","validate"],function($,e,t,o,s){t.getHtml("entAccount",function(t){var o=e.render(t);$("#test1-page").html(o)})})});
+define(["mustache"],function(mustache){alert("this is test1")});
