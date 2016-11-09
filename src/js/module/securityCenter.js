@@ -1,3 +1,8 @@
-define(["mustache"],function(mustache){
-    alert("this is test1");
+define(function(){
+    var add = function (x,y){
+　　　　　　return x+y;
+　　　　};
+　　　　return {
+　　　　　　add: add
+　　　　};
 });
