@@ -33,7 +33,7 @@ var globs = {
     testPngquant:'src/images/*',
 	testLess:"src/less/*.less",
 	testHtmlmin:"src/html/*",
-    testHtmlTlpmin:"src/html/tpl/*"
+    testHtmlTplmin:"src/html/tpl/*"
 };
 
 gulp.task('webserver', function() {
@@ -141,9 +141,25 @@ gulp.task('testHtmlmin', function(){
         minifyJS: true,//压缩页面JS
         minifyCSS: true//压缩页面CSS
 	};
-	gulp.src('src/html/**/*.html')
+	gulp.src('src/html/*.html')
 		.pipe(htmlmin(opts))
 		.pipe(gulp.dest('dist/html'))
+        .pipe(livereload());
+});
+gulp.task('testHtmlTplmin', function(){
+    var opts = {
+        removeComments: true,//清除HTML注释
+        collapseWhitespace: true,//压缩HTML
+        collapseBooleanAttributes: true,//省略布尔属性的值 <input checked="true"/> ==> <input />
+        removeEmptyAttributes: true,//删除所有空格作属性值 <input id="" /> ==> <input />
+        removeScriptTypeAttributes: true,//删除<script>的type="text/javascript"
+        removeStyleLinkTypeAttributes: true,//删除<style>和<link>的type="text/css"
+        minifyJS: true,//压缩页面JS
+        minifyCSS: true//压缩页面CSS
+    };
+    gulp.src('src/html/tpl/*.html')
+        .pipe(htmlmin(opts))
+        .pipe(gulp.dest('dist/html/tpl'))
         .pipe(livereload());
 });
 
@@ -163,7 +179,7 @@ gulp.task('sassfile',function(){
 		.pipe(livereload());;
 });
 
-gulp.task('build', ['testLess','jsmin','jsmin2','testPngquant','testRev','testHtmlmin']);
+gulp.task('build', ['testLess','jsmin','jsmin2','testPngquant','testRev','testHtmlmin','testHtmlTplmin']);
 gulp.task('watch', ['build'], function () {
     // 监听有改变自动刷新浏览器
 	livereload.listen();
@@ -176,7 +192,7 @@ gulp.task('watch', ['build'], function () {
     gulp.watch(globs.testPngquant, ['testPngquant']);
 		
 	gulp.watch(globs.testHtmlmin, ['testHtmlmin']);
-    gulp.watch(globs.testHtmlTlpmin, ['testHtmlmin']);
+    gulp.watch(globs.testHtmlTplmin, ['testHtmlTplmin']);
 
     
 });
