@@ -1,6 +1,11 @@
 /*=============
 登录页面样式
 ==============*/
+@center: center;
+@white: #fff;
+@width100: 100px;
+@margin-auto:0 auto;
+
 .clearFloat{
   clear: both;
 }
@@ -8,6 +13,23 @@
   margin-top: 20px;
 }
 .topNav{
-  background-color: #262626;
-  color: #FFFFFF;
+  background-color: #261c11;
+  color: @white;
+}
+.passwd-content{
+  text-align: @center;
+}
+.w80{
+  width: (@width100)-20;
+}
+.w200{
+  width:@width100*8;
+  margin:@margin-auto;
+  margin-bottom: 20px;
+  color: #2894ff;
+  border-bottom: 2px solid #2894ff;
+}
+.w150{
+  width:@width100+50;
+  margin-left: (@width100)-20;
 }
