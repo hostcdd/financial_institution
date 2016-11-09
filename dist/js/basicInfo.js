@@ -1,0 +1,4 @@
+/**
+ * Created by Administrator on 2016/6/21.
+ */
+define(function(){require.config({waitSeconds:0,baseUrl:"js",paths:{jquery:"../../js/vendor/jquery.min",bootstrap:"../../js/vendor/bootstrap.min",mustache:"../../js/vendor/mustache.min",public:"../../js/common/public",basicInfo:"../../js/module/basicInfo",validate:"../../js/common/validate",api:"../../js/common/api",hash:"../../js/vendor/hash"},shim:{bootstrap:{deps:["jquery"],exports:"bootstrap"},hash:{deps:["jquery"],exports:"hash"}}}),require(["jquery","mustache","public","basicInfo","validate"],function($,s,e,o,a){e.getHtml("basicInfo",function(e){var o=s.render(e);$("#basicInfo-page").html(o)})})});
