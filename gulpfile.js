@@ -29,9 +29,11 @@ var gulp = require('gulp'), //本地安装gulp所用到的地方
 	
 var globs = {
     jsmin:'src/js/*.js',
+    jsModulemin:'src/js/module/*.js',
     testPngquant:'src/images/*',
 	testLess:"src/less/*.less",
-	testHtmlmin:"src/html/*"
+	testHtmlmin:"src/html/*",
+    testHtmlTlpmin:"src/html/tpl/*"
 };
 
 gulp.task('webserver', function() {
@@ -50,15 +52,28 @@ gulp.task('testLess', function () {
 
 //定义一个jsmin任务，用于压缩js（自定义任务名称）
 gulp.task('jsmin', function () {
-    gulp.src('src/js/*.js')
+    gulp.src(['src/js/*.js'])
         .pipe(uglify({
 			//mangle: true,//类型：Boolean 默认：true 是否修改变量名
-            mangle: {except: ['require' ,'exports' ,'module' ,'$']},//排除混淆关键字
+            mangle: false,
+            //mangle: {except: ['require' ,'exports' ,'module' ,'$']},//排除混淆关键字
 			compress: true,//类型：Boolean 默认：true 是否完全压缩
             preserveComments: 'all' //保留所有注释
 		}))
         .pipe(gulp.dest('dist/js'))
 		.pipe(livereload());
+});
+gulp.task('jsmin2', function () {
+    gulp.src(['src/js/module/*.js'])
+        .pipe(uglify({
+            //mangle: true,//类型：Boolean 默认：true 是否修改变量名
+            mangle: false,
+            //mangle: {except: ['require' ,'exports' ,'module' ,'$']},//排除混淆关键字
+            compress: true,//类型：Boolean 默认：true 是否完全压缩
+            preserveComments: 'all' //保留所有注释
+        }))
+        .pipe(gulp.dest('dist/js/module'))
+        .pipe(livereload());
 });
 
 //使用gulp-concat合并javascript文件，减少网络请求。
@@ -148,18 +163,20 @@ gulp.task('sassfile',function(){
 		.pipe(livereload());;
 });
 
-gulp.task('build', ['testLess','jsmin','testPngquant','testRev','testHtmlmin']);
+gulp.task('build', ['testLess','jsmin','jsmin2','testPngquant','testRev','testHtmlmin']);
 gulp.task('watch', ['build'], function () {
     // 监听有改变自动刷新浏览器
 	livereload.listen();
 	
     gulp.watch(globs.jsmin, ['jsmin']);
+    gulp.watch(globs.jsModulemin, ['jsmin2']);
 
     gulp.watch(globs.testLess, ['testLess']);
 
     gulp.watch(globs.testPngquant, ['testPngquant']);
 		
 	gulp.watch(globs.testHtmlmin, ['testHtmlmin']);
+    gulp.watch(globs.testHtmlTlpmin, ['testHtmlmin']);
 
     
 });
