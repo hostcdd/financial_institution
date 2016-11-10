@@ -10,5 +10,15 @@ $(function(){
     var $content = $("#content-page");
     var contentWidth = $content.width();
     $content.height((windowHeight-headerHeight-50)+"px").width((contentWidth-4)+"px");
+
+    // 将url填入页面
+    (function(){
+        for(key in URLOBJ){
+            var $menu = $("#"+key);
+            if($menu.length>0){
+                $menu.attr("data-url",URLOBJ[key]);
+            }
+        }
+    })();
 });
 
