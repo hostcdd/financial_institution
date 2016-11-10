@@ -4,7 +4,7 @@ $(function(){
         $('#myModal4Notify').modal('show');
     }
     $("#modEmail").click(function(){
-        $("#myModal4email").modal('hide');
+        $("#myModal4email").modal('hide'); 
         showEmailInfo();
     })
 })

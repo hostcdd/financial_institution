@@ -29,6 +29,7 @@ var gulp = require('gulp'), //本地安装gulp所用到的地方
 	
 var globs = {
     jsmin:'src/js/*.js',
+    jsminCommon:'src/js/common/*.js',
     testPngquant:'src/images/*',
 	testLess:"src/less/*.less",
 	testHtmlmin:"src/html/*"
@@ -60,6 +61,19 @@ gulp.task('jsmin', function () {
 		}))
         .pipe(gulp.dest('dist/js'))
 		.pipe(livereload());
+});
+//定义一个jsmin任务，用于压缩js（自定义任务名称）
+gulp.task('jsminCommon', function () {
+    gulp.src(['src/js/common/*.js'])
+        .pipe(uglify({
+            //mangle: true,//类型：Boolean 默认：true 是否修改变量名
+            mangle: false,
+            //mangle: {except: ['require' ,'exports' ,'module' ,'$']},//排除混淆关键字
+            compress: true,//类型：Boolean 默认：true 是否完全压缩
+            preserveComments: 'all' //保留所有注释
+        }))
+        .pipe(gulp.dest('dist/js/common'))
+        .pipe(livereload());
 });
 
 //使用gulp-concat合并javascript文件，减少网络请求。
@@ -149,12 +163,13 @@ gulp.task('sassfile',function(){
 		.pipe(livereload());;
 });
 
-gulp.task('build', ['testLess','jsmin','testPngquant','testRev','testHtmlmin']);
+gulp.task('build', ['testLess','jsmin','testPngquant','testRev','testHtmlmin','jsminCommon']);
 gulp.task('watch', ['build'], function () {
     // 监听有改变自动刷新浏览器
 	livereload.listen();
 	
     gulp.watch(globs.jsmin, ['jsmin']);
+    gulp.watch(globs.jsminCommon, ['jsminCommon']);
 
     gulp.watch(globs.testLess, ['testLess']);
 
