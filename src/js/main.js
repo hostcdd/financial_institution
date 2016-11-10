@@ -20,5 +20,17 @@ $(function(){
             }
         }
     })();
+
+    // 点击显示子菜单
+    $("#navBar .parentMenu").click(function(){
+        var $targetUl = $(this).next();
+        if($targetUl.hasClass("hidden")){
+            $("#navBar .parentMenu+ul").addClass("hidden");
+            $targetUl.removeClass("hidden");    
+        }else{
+            $targetUl.addClass("hidden");
+        }
+        
+    })
 });
 
