@@ -1,11 +1,20 @@
 /*=============
 登录页面样式
 ==============*/
-@center: center;
+
+/*颜色样式*/
 @white: #fff;
-@width100: 100px;
+@base-blue:#00a9f4;
+
+/*布局样式*/
+@center: center;
+@num100: 100px;
 @margin-auto:0 auto;
 
+/*底部下划线*/
+.border-b(@num:2px,@color:@base-blue){
+  border-bottom: 2px solid @base-blue;
+}
 .clearFloat{
   clear: both;
 }
@@ -20,16 +29,25 @@
   text-align: @center;
 }
 .w80{
-  width: (@width100)-20;
+  width: (@num100)-20;
 }
 .w200{
-  width:@width100*8;
+  width:@num100*8;
   margin:@margin-auto;
   margin-bottom: 20px;
-  color: #2894ff;
-  border-bottom: 2px solid #2894ff;
+  color: @base-blue;
+  border-bottom: 2px solid @base-blue;
 }
 .w150{
-  width:@width100+50;
-  margin-left: (@width100)-20;
+  width:@num100+50;
+  margin-left: (@num100)-20;
+}
+.pw-active{
+  color: @base-blue;
+}
+.mb{
+  margin-bottom: @num100/4;
+}
+.border-b{
+  .border-b();
 }
