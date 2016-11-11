@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>企业审核</title>
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/enterprise.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="enterprise">
+        <h2>企业审核</h2>
+        <ul class="list-inline row">
+            <li class="col-xs-8">
+                <span class="col-xs-2">接受收期:</span>
+                <p class="col-xs-10">
+                    <a href="javascript:;">今天</a>
+                    <a href="javascript:;">近7天</a>
+                    <a href="javascript:;">近30天</a>
+                    <input type="text" placeholder="日期">——<input type="text" placeholder="时间">
+                </p>
+            </li>
+            <li class="col-xs-8">
+                <span class="col-xs-2">状态:</span>
+                <p class="col-xs-10">
+                    <a href="javascript:;">全部</a>
+                    <a href="javascript:;">待审核</a>
+                    <a href="javascript:;">已通过</a>
+                    <a href="javascript:;">已拒绝</a>
+                    <a href="javascript:;">已停用</a>
+                </p>
+            </li>
+            <li class="col-xs-8">
+                <span class="col-xs-2">融资企业名称:</span>
+                <p class="col-xs-10">
+                    <input type="text" placeholder="企业名称">
+                </p>
+            </li>
+            <li class="col-xs-8">
+                <span class="col-xs-2">品牌名称:</span>
+                <p class="col-xs-10">
+                    <a href="javascript:;">全部</a>
+                    <a href="javascript:;">翼收宝</a>
+                    <a href="javascript:;">翼订宝</a>
+                    <a href="javascript:;" class="btn btn-info">查询</a>
+                    <a href="javascript:;" class="btn btn-info">重置</a>
+                </p>
+            </li>
+            <li class="col-xs-8">
+                <span class="col-xs-2">产品名称:</span>
+                <p class="col-xs-10">
+                    <a href="javascript:;">全部</a>
+                    <a href="javascript:;">京东-翼收宝</a>
+                    <a href="javascript:;">京东-翼订宝</a>
+                    <a href="javascript:;">蒙牛-翼收宝</a>
+                    <a href="javascript:;">伊利-翼订宝</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <ul class="list-inline">
+            <li><a href="javascript:;" class="btn btn-info">审批通过</a></li>
+            <li><a href="javascript:;" class="btn btn-info">审批拒绝</a></li>
+            <li><a href="javascript:;" class="btn btn-info">已停用</a></li>
+        </ul>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>全选</th>
+                    <th>产品名称</th>
+                    <th>融资企业名称</th>
+                    <th>状态</th>
+                    <th>注册资本(万元)</th>
+                    <th>建议授信额度(元)</th>
+                    <th>接收日期</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox">1</td>
+                    <td>水果贷</td>
+                    <td>供应商A</td>
+                    <td>已通过</td>
+                    <td>1,000,000</td>
+                    <td>5,000</td>
+                    <td>2015-10-15</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
