@@ -42,6 +42,8 @@ var URLOBJ = {
 		userDetail: "./userDetail.html",
 		//修改密码
 		userPwdMod: "./userPwdMod.html",
+		//融资协议审核
+		financeAgreementCheck:"./financeAgreementCheck.html",
 	};
 
 // 修改iframeUrl
