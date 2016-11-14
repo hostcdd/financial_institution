@@ -3,16 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/vendor/bootstrap.css">
+    <link rel="stylesheet" media="screen" href="../css/vendor/datetimepicker.min.css" >
+    <link rel="stylesheet" media="screen" href="../css/vendor/bootstrap-theme.min.css" >
+    <link rel="stylesheet" media="screen" href="../css/creditManage.css" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
 </head>
 <body>
 <div  class="container identity-container" >
-    <div id="content-page" >
-    	 <h1>this is test2</h1>
+  <div id="basicInfo-page" >
+	    <div class="container">
+				<h1>授信处理</h1>
+				<form class="form-horizontal" role="form">
+				  <label class="col-xs-2 control-label">申请日期</label>
+	        <div class="col-xs-10">
+	          <div class="container-fluid col-xs-3">
+	            <div class="form-group has-feedback">
+	              <input type="text" class="form-control form_datetime" name="q_start_date" id="q_start_date" >
+	              <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+	            </div>
+	          </div>
+	          <div class="col-xs-1">
+	            <p class="form-control-static text-center">-</p>
+	          </div>
+	          <div class="container-fluid col-xs-3">
+	            <div class="form-group has-feedback">
+	              <input type="text" class="form-control form_datetime" id="q_end_date" name="q_end_date">
+	              <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+	            </div>
+	          </div>
+	          <div class="col-xs-offset-1 col-xs-4">
+		          <button type="button" class="btn btn-default">今天</button>
+		          <button type="button" class="btn btn-default">近7天</button>
+		          <button type="button" class="btn btn-default">近30天</button>
+						</div>
+	        </div>
+
+				    <label for="inputEmail3" class="col-xs-2 control-label">企业融资名称</label>
+				    <div class="col-xs-10">
+					    <div class="col-xs-4">
+					    	<div class="form-group">
+					      	<input type="text" class="form-control" id="inputEmail3" placeholder="">
+					      </div>
+					    </div>
+				    </div>
+
+				    <label for="inputEmail3" class="col-xs-2 control-label">业务申请单号</label>
+				    <div class="col-xs-10">
+					    <div class="col-xs-4">
+					    	<div class="form-group">
+					      	<input type="text" class="form-control" id="inputEmail3" placeholder="">
+					      </div>
+					    </div>
+				    </div>
+	        
+	        <label class="col-sm-2 control-label">品牌名称</label>
+	        <div class="col-sm-10">
+	          <div class="container-fluid col-sm-10">
+	            <div class="form-group">
+			          <button type="button" class="btn btn-info">全部</button>
+			          <button type="button" class="btn btn-default">翼收宝</button>
+			          <button type="button" class="btn btn-default">翼订宝</button>
+							</div>
+						</div>
+	        </div>
+
+					<label class="col-sm-2 control-label">产品名称</label>
+	        <div class="col-sm-10">
+	          <div class="container-fluid col-sm-10">
+	            <div class="form-group">
+			          <button type="button" class="btn btn-info">全部</button>
+			          <button type="button" class="btn btn-default">京东-翼收宝</button>
+			          <button type="button" class="btn btn-default">京东-翼订宝</button>
+			          <button type="button" class="btn btn-default">蒙牛-翼收宝</button>
+			          <button type="button" class="btn btn-default">伊利-翼订宝</button>
+							</div>
+						</div>
+	        </div>
+	        <div class="col-sm-10 col-sm-offset-2">
+	        	<div class="container-fluid col-sm-10">
+	            <div class="form-group">
+			          <button type="button" class="btn btn-primary">查询</button>
+			          <button type="button" class="btn btn-default">重置</button>
+							</div>
+						</div>
+	        </div>
+				</form>
+				  <table class="table table-bordered">
+			      <thead>
+			        <tr>
+			          <th>操作</th>
+			          <th>申请日期</th>
+			          <th>业务申请单号</th>
+			          <th>融资企业名称</th>
+			          <th>产品名称</th>
+			          <th>申请额度(元)</th>
+			          <th>申请期限</th>
+			        </tr>
+			      </thead>
+			      <tbody>
+			        <tr>
+			          <td><a href="#">处理</a></td>
+			          <td>2015/09/09</td>
+			          <td>00010</td>
+			          <td>北京供应商A</td>
+			          <td>蒙牛</td>
+			          <td></td>
+			          <td></td>
+			        </tr>
+			        <tr>
+			          <td><a href="#">处理</a></td>
+			          <td>2015/09/09</td>
+			          <td>00012</td>
+			          <td>果农</td>
+			          <td>水果贷</td>
+			          <td></td>
+			          <td></td>
+			        </tr>
+			        <tr>
+			          <td><a href="#">处理</a></td>
+			          <td>2015/09/09</td>
+			          <td>00012</td>
+			          <td>每日优鲜</td>
+			          <td>水果贷</td>
+			          <td></td>
+			          <td></td>
+			        </tr>
+			      </tbody>
+		      </table>
+			</div>
     </div>
 </div>
 <script src="../js/vendor/jquery.min.js"></script>
 <script src="../js/vendor/bootstrap.min.js"></script>
+<script src="../js/vendor/datetimepicker.min.js"></script>
+<script src="../js/vendor/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="../js/creditManage.js"></script>
 </body>
 </html>
