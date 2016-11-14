@@ -44,6 +44,18 @@ var URLOBJ = {
 		userPwdMod: "./userPwdMod.html",
 		//融资协议审核
 		financeAgreementCheck:"./financeAgreementCheck.html",
+		//融资记录详情--待处理
+		financeRecordPending:"financeRecordPending.html",
+		//融资记录详情--待签署
+		financeRecordNoSigned:"financeRecordNoSigned.html",
+		//融资记录详情--履行中
+		financeRecordPerforming:"financeRecordPerforming.html",
+		//融资记录详情--已拒绝（处理时）
+		financeRecordRefusedPro:"financeRecordRefused.html",
+		//融资记录详情--已拒绝（审核时）
+		financeRecordRefusedCheck:"financeRecordRefusedCheck.html",
+		//处理明细
+		processDetail:"processDetail.html",
 	};
 
 // 修改iframeUrl
