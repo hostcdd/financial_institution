@@ -44,6 +44,8 @@ var URLOBJ = {
 		userPwdMod: "./userPwdMod.html",
 		//融资协议审核
 		financeAgreementCheck:"./financeAgreementCheck.html",
+		//产品查看
+		productDetail:"./productDetail.html"
 	};
 
 // 修改iframeUrl
