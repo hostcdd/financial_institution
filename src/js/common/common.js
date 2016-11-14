@@ -56,6 +56,8 @@ var URLOBJ = {
 		financeRecordRefusedCheck:"financeRecordRefusedCheck.html",
 		//处理明细
 		processDetail:"processDetail.html",
+		//产品查看
+		productDetail:"./productDetail.html"
 	};
 
 // 修改iframeUrl
