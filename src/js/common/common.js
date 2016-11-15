@@ -45,21 +45,34 @@ var URLOBJ = {
 		//融资协议审核
 		financeAgreementCheck:"./financeAgreementCheck.html",
 		//融资记录详情--待处理
-		financeRecordPending:"financeRecordPending.html",
+		financeRecordPending:"./financeRecordPending.html",
 		//融资记录详情--待签署
-		financeRecordNoSigned:"financeRecordNoSigned.html",
+		financeRecordNoSigned:"./financeRecordNoSigned.html",
 		//融资记录详情--履行中
-		financeRecordPerforming:"financeRecordPerforming.html",
+		financeRecordPerforming:"./financeRecordPerforming.html",
 		//融资记录详情--已拒绝（处理时）
-		financeRecordRefusedPro:"financeRecordRefused.html",
+		financeRecordRefusedPro:"./financeRecordRefused.html",
 		//融资记录详情--已拒绝（审核时）
-		financeRecordRefusedCheck:"financeRecordRefusedCheck.html",
+		financeRecordRefusedCheck:"./financeRecordRefusedCheck.html",
 		//处理明细
-		processDetail:"processDetail.html",
+		processDetail:"./processDetail.html",
 		//产品查看
 		productDetail:"./productDetail.html",
+<<<<<<< HEAD
 		//授信处理详情
 		creditDetail:"./creditDetail.html"
+=======
+		/********************
+		 * 结算管理
+		*********************/
+		//放款处理
+		accountManage:"./accountManage.html",
+		//付款单
+		payList:"./payList.html",
+		//付款信息
+		payInfo:"./payInfo.html",
+
+>>>>>>> f19dc15580108864283d12590a5dd04a8c97495d
 	};
 
 // 修改iframeUrl
