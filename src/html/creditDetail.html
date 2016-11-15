@@ -5,12 +5,80 @@
     <link rel="stylesheet" href="../css/vendor/bootstrap.css">
     <link rel="stylesheet" media="screen" href="../css/vendor/datetimepicker.min.css" >
     <link rel="stylesheet" media="screen" href="../css/vendor/bootstrap-theme.min.css" >
+    <link rel="stylesheet" href="../css/creditDetail.css" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
 </head>
 <body>
 <div  class="container identity-container" >
     <div id="basicInfo-page" >
 	    <div class="container">
+				<div id="detailHead">融资企业名称：<span>xxx供应商</span>业务申请单号：<span>0001234</span>品牌名称：<span>翼收宝</span>产品名称：<span>京东-翼收宝</span>状态：<span>待处理</span>企业状态：<span>正常</span></div>
+				<div id="tabDiv">
+					<ul id="myTab" class="nav nav-pills" role="tablist">
+			      <li role="presentation" class="active"><a href="#creditTab" id="credit-tab" role="tab" data-toggle="tab" aria-controls="creditTab" aria-expanded="true">企业授信</a></li>
+			      <li role="presentation"><a href="#basicMsgTab" role="tab" id="basic-msg-tab" data-toggle="tab" aria-controls="basicMsgTab">企业基本信息</a></li>
+			      <li role="presentation"><a href="#approvalTab" role="tab" id="approval-tab" data-toggle="tab" aria-controls="approvalTab">申请信息</a></li>
+			      <li role="presentation"><a href="#addtionFileTab" role="tab" id="addtion-file-tab" data-toggle="tab" aria-controls="addtionFileTab">企业附加材料</a></li>
+			    </ul>
+				</div>
+				
+				<div id="myTabContent" class="tab-content">
+		      <div role="tabpanel" class="tab-pane fade in active" id="creditTab" aria-labelledBy="home-tab">
+		        <h3>企业授信</h3>
+		        <h5>综合授信状况</h5>
+		        <div id="companyHeadInfo">
+		        	<span class="pull-left"><a href="#">企业评级：AAA</a></span>
+		        	<span class="pull-right">授信可用额度：
+		        		<span>xxxxxxxx</span>元
+		        	</span>
+		        	<span class="pull-right">企业综合授信额度：
+		        		<span>1,200,000</span>元
+		        	</span>
+		        </div>
+						<table id="hisTable" class="table table-bordered pull-left">
+				      <thead>
+				        <tr>
+				          <th>产品名称</th>
+				          <th>授信时间</th>
+				          <th>授信额度(元)</th>
+				          <th>授信日利率</th>
+				          <th>状态</th>
+				          <th>授信到期日</th>
+				        </tr>
+				      </thead>
+				      <tbody>
+				        <tr>
+				          <td>蒙牛</td>
+				          <td>2015-09-09</td>
+				          <td>500,000</td>
+				          <td>万分之2.5</td>
+				          <td>履行中</td>
+				          <td>2016-09-09</td>
+				        </tr>
+				        <tr>
+				          <td>伊利</td>
+				          <td>2015-09-09</td>
+				          <td>700,000</td>
+				          <td>万分之2.5</td>
+				          <td>履行中</td>
+				          <td>2016-09-09</td>
+				        </tr>
+				      </tbody>
+			      </table>
+		      </div>
+		      <div role="tabpanel" class="tab-pane fade" id="basicMsgTab" aria-labelledBy="profile-tab">
+		        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+		      </div>
+		      <div role="tabpanel" class="tab-pane fade" id="approvalTab" aria-labelledBy="profile-tab">
+		        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+		      </div>
+		      <div role="tabpanel" class="tab-pane fade" id="addtionFileTab" aria-labelledBy="profile-tab">
+		        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+		      </div>
+		    </div>
+
+
+
 				<h1>费用信息</h1>
 				<form class="form-horizontal" role="form">
 				  <label class="col-sm-2 control-label">费用产生时间</label>
@@ -111,6 +179,6 @@
 <script src="../js/vendor/bootstrap.min.js"></script>
 <script src="../js/vendor/datetimepicker.min.js"></script>
 <script src="../js/vendor/bootstrap-datetimepicker.zh-CN.js"></script>
-<script src="../js/costDetail.js"></script>
+<script src="../js/creditDetail.js"></script>
 </body>
 </html>
