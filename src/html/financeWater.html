@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>资金流水</title>
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/enterprise.css"/>
+    <link rel="stylesheet" media="screen" href="../css/vendor/datetimepicker.min.css" >
+</head>
+<body>
+<div class="container">
+    <div class="enterprise">
+        <h2>资金流水</h2>
+        <ul class="list-inline row">
+            <li class="col-xs-8">
+                <span class="col-xs-2">交易日期:</span>
+                <p class="col-xs-3">
+                    <a href="javascript:;">全部</a>
+                    <a href="javascript:;">今天</a>
+                    <a href="javascript:;">一周内</a>
+                    <a href="javascript:;">近30内</a>
+                </p>
+                <form class="form-horizontal" role="form">
+                    <div class="col-xs-7">
+                        <div class="container-fluid col-xs-5">
+                            <div class="form-group has-feedback">
+                                <input type="text" class="form-control form_datetime" name="q_start_date" id="q_start_date" >
+                                <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="form-control-static text-center">-</p>
+                        </div>
+                        <div class="container-fluid col-xs-5">
+                            <div class="form-group has-feedback">
+                                <input type="text" class="form-control form_datetime" id="q_end_date" name="q_end_date">
+                                <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </li>
+            <li class="col-xs-8">
+                <span class="col-xs-2">对方账号:</span>
+                <p class="col-xs-10">
+                    <input type="text" placeholder="账号">
+                </p>
+            </li>
+            <li class="col-xs-8">
+                <span class="col-xs-2">收支类型:</span>
+                <p class="col-xs-10">
+                    <a href="javascript:;">全部</a>
+                    <a href="javascript:;">放款</a>
+                    <a href="javascript:;">回款</a>
+                    <a href="javascript:;">手续费</a>
+                    <a href="javascript:;" class="btn btn-info">查询</a>
+                    <a href="javascript:;" class="btn btn-info">重置</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>交易日</th>
+                <th>收支类型</th>
+                <th>支出（元）</th>
+                <th>收入（元）</th>
+                <th>账户余额</th>
+                <th>对方账户</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2016-4-22</td>
+                <td>放款</td>
+                <td>-50000</td>
+                <td>+8000</td>
+                <td>5000元</td>
+                <td>
+                    <p>北京ABC服装</p>
+                    <p>账号 6214830109088855</p>
+                </td>
+            </tr>
+            <tr>
+                <td>2016-4-22</td>
+                <td>放款</td>
+                <td>-50000</td>
+                <td>000</td>
+                <td>5000元</td>
+                <td>
+                    <p>北京ABC服装</p>
+                    <p>账号 6214830109088855</p>
+                </td>
+            </tr>
+            <tr>
+                <td>2016-4-22</td>
+                <td>放款</td>
+                <td>-50000</td>
+                <td>+8000</td>
+                <td>5000元</td>
+                <td>
+                    <p>北京ABC服装</p>
+                    <p>账号 6214830109088855</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+    </div>
+</div>
+</body>
+</html>

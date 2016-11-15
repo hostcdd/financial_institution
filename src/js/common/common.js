@@ -69,6 +69,12 @@ var URLOBJ = {
 		payList:"./payList.html",
 		//付款信息
 		payInfo:"./payInfo.html",
+		//回款处理
+		returnMoneyProcess:"./returnMoneyProcess.html",
+		//资金流水
+		financeWater:"./financeWater.html",
+		//企业银行流水查询
+		bankWater:"./bankWater.html",
 	};
 
 // 修改iframeUrl
