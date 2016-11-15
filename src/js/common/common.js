@@ -58,10 +58,8 @@ var URLOBJ = {
 		processDetail:"./processDetail.html",
 		//产品查看
 		productDetail:"./productDetail.html",
-<<<<<<< HEAD
 		//授信处理详情
 		creditDetail:"./creditDetail.html"
-=======
 		/********************
 		 * 结算管理
 		*********************/
@@ -71,8 +69,6 @@ var URLOBJ = {
 		payList:"./payList.html",
 		//付款信息
 		payInfo:"./payInfo.html",
-
->>>>>>> f19dc15580108864283d12590a5dd04a8c97495d
 	};
 
 // 修改iframeUrl
