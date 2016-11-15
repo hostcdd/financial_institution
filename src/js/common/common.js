@@ -59,7 +59,7 @@ var URLOBJ = {
 		//产品查看
 		productDetail:"./productDetail.html",
 		//授信处理详情
-		creditDetail:"./creditDetail.html"
+		creditDetail:"./creditDetail.html",
 		/********************
 		 * 结算管理
 		*********************/
