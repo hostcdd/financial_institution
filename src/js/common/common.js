@@ -57,7 +57,9 @@ var URLOBJ = {
 		//处理明细
 		processDetail:"processDetail.html",
 		//产品查看
-		productDetail:"./productDetail.html"
+		productDetail:"./productDetail.html",
+		//授信处理详情
+		creditDetail:"./creditDetail.html"
 	};
 
 // 修改iframeUrl
