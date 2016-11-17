@@ -1,5 +1,19 @@
 // 菜单的地址
 var URLOBJ = {
+		/********************
+		 * 企业登录模块
+		 *********************/
+		//企业登录
+		login:"./login.html",
+		//首次登陆修改密码
+		changePassword:"./changePassword.html",
+		//修改密码成功
+		/*没写------*/
+		//忘记密码
+		forgetPassword:"./forgetPassword.html",
+		/********************
+		 * 授信管理模块
+		 *********************/
 		//授信处理
 		creditManage: "./creditManage.html",
 		//授信审核
@@ -10,8 +24,6 @@ var URLOBJ = {
 		financeManage: "./financeManage.html",
 		//协议审核
 		financeApproval: "./financeApproval.html",
-		//融资记录
-		financeRecord: "./financeRecord.html",
 		//放款处理
 		loanManage: "./loanManage.html",
 		//回款处理
@@ -24,8 +36,6 @@ var URLOBJ = {
 		businessContract: "./businessContract.html",
 		//融资合同
 		financeContract: "./financeContract.html",
-		//企业审核
-		entApproval: "./entApproval.html",
 		//基本信息
 		basicInfo: "./basicInfo.html",
 		//安全中心
@@ -42,8 +52,15 @@ var URLOBJ = {
 		userDetail: "./userDetail.html",
 		//修改密码
 		userPwdMod: "./userPwdMod.html",
+		/********************
+		 * 融资管理模块
+		 *********************/
 		//融资协议审核
 		financeAgreementCheck:"./financeAgreementCheck.html",
+		//签署合同
+		financeAgreement:"./financeAgreement.html",
+		//融资记录
+		financeRecord: "./financeRecord.html",
 		//融资记录详情--待处理
 		financeRecordPending:"./financeRecordPending.html",
 		//融资记录详情--待签署
@@ -56,12 +73,13 @@ var URLOBJ = {
 		financeRecordRefusedCheck:"./financeRecordRefusedCheck.html",
 		//处理明细
 		processDetail:"./processDetail.html",
+	/**********************************************************/
 		//产品查看
 		productDetail:"./productDetail.html",
 		//授信处理详情
 		creditDetail:"./creditDetail.html",
 		/********************
-		 * 结算管理
+		 * 结算管理模块
 		*********************/
 		//放款处理
 		accountManage:"./accountManage.html",
@@ -75,6 +93,25 @@ var URLOBJ = {
 		financeWater:"./financeWater.html",
 		//企业银行流水查询
 		bankWater:"./bankWater.html",
+		//到处明细模板
+		/*没写------*/
+		/********************
+		 * 合同管理模块
+		 *********************/
+		//合同管理
+		contractManageBusiness:"./contractManageBusiness.html",
+		//业务合同详情
+		businessContractDetail:"./businessContractDetail.html",
+		//单笔融资合同详情
+		/*没写--------------*/
+		/********************
+		 * 企业审核模块
+		 *********************/
+		//企业审核
+		entApproval: "./entApproval.html",
+		//融资企业信息
+		/*没写------*/
+	/*************************************************/
 	};
 
 // 修改iframeUrl
