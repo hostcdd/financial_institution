@@ -8,7 +8,7 @@ var URLOBJ = {
 		//首次登陆修改密码
 		changePassword:"./changePassword.html",
 		//修改密码成功
-		/*没写------*/
+		changePWsuccess:"./changePWsuccess.html",
 		//忘记密码
 		forgetPassword:"./forgetPassword.html",
 		/********************
@@ -75,7 +75,6 @@ var URLOBJ = {
 		financeRecordRefusedCheck:"./financeRecordRefusedCheck.html",
 		//处理明细
 		processDetail:"./processDetail.html",
-	/**********************************************************/
 		//产品查看
 		productDetail:"./productDetail.html",
 		//授信处理详情
@@ -95,7 +94,7 @@ var URLOBJ = {
 		financeWater:"./financeWater.html",
 		//企业银行流水查询
 		bankWater:"./bankWater.html",
-		//到处明细模板
+		//导出明细模板
 		/*没写------*/
 		/********************
 		 * 合同管理模块
@@ -105,15 +104,14 @@ var URLOBJ = {
 		//业务合同详情
 		businessContractDetail:"./businessContractDetail.html",
 		//单笔融资合同详情
-		/*没写--------------*/
+		financeContractDetail:"./financeContractDetail.html",
 		/********************
 		 * 企业审核模块
 		 *********************/
 		//企业审核
 		entApproval: "./entApproval.html",
 		//融资企业信息
-		/*没写------*/
-	/*************************************************/
+		financeCompanyInfo:"./financeCompanyInfo.html",
 	};
 
 // 修改iframeUrl
