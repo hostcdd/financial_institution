@@ -12,7 +12,7 @@
 <div  class="container identity-container" >
   <div id="basicInfo-page" >
 	    <div class="container">
-				<h1>授信处理</h1>
+				<h1>授信记录</h1>
 				<form class="form-horizontal" role="form">
 				  <label class="col-xs-2 control-label">申请日期</label>
 	        <div class="col-xs-10">
@@ -36,6 +36,18 @@
 		          <button type="button" class="btn btn-default">近7天</button>
 		          <button type="button" class="btn btn-default">近30天</button>
 						</div>
+	        </div>
+
+					<label class="col-xs-2 control-label">状态</label>
+	        <div class="col-xs-10">
+		          <button type="button" class="btn btn-default">全部</button>
+		          <button type="button" class="btn btn-default">待处理</button>
+		          <button type="button" class="btn btn-default">待审核</button>
+		          <button type="button" class="btn btn-default">已通过</button>
+		          <button type="button" class="btn btn-default">履行中</button>
+		          <button type="button" class="btn btn-default">履行完毕</button>
+		          <button type="button" class="btn btn-default">已拒绝</button>
+		          <button type="button" class="btn btn-default">已取消</button>
 	        </div>
 
 				    <label for="inputEmail3" class="col-xs-2 control-label">企业融资名称</label>
@@ -121,37 +133,72 @@
 			          <th>业务申请单号</th>
 			          <th>融资企业名称</th>
 			          <th>产品名称</th>
-			          <th>申请额度(元)</th>
-			          <th>申请期限</th>
+			          <th>最终处理人</th>
+			          <th>状态</th>
 			        </tr>
 			      </thead>
 			      <tbody>
 			        <tr>
-			          <td><a href="#" class="go-detail">处理</a></td>
+			          <td><a href="#" class="go-detail">查看</a></td>
 			          <td>2015/09/09</td>
 			          <td>00010</td>
 			          <td>北京供应商A</td>
 			          <td>蒙牛</td>
-			          <td></td>
-			          <td></td>
+			          <td>张三</td>
+			          <td><a href="#">待处理</a></td>
 			        </tr>
 			        <tr>
-			          <td><a href="#" class="go-detail">处理</a></td>
+			          <td><a href="#" class="go-detail">查看</a></td>
 			          <td>2015/09/09</td>
 			          <td>00012</td>
 			          <td>果农</td>
 			          <td>水果贷</td>
-			          <td></td>
-			          <td></td>
+			          <td>张三</td>
+			          <td><a href="#">待审核</a></td>
 			        </tr>
 			        <tr>
-			          <td><a href="#" class="go-detail">处理</a></td>
+			          <td><a href="#" class="go-detail">查看</a></td>
 			          <td>2015/09/09</td>
 			          <td>00012</td>
 			          <td>每日优鲜</td>
 			          <td>水果贷</td>
-			          <td></td>
-			          <td></td>
+			          <td>张三</td>
+			          <td><a href="#">已通过</a></td>
+			        </tr><tr>
+			          <td><a href="#" class="go-detail">查看</a></td>
+			          <td>2015/09/09</td>
+			          <td>00012</td>
+			          <td>每日优鲜</td>
+			          <td>水果贷</td>
+			          <td>张三</td>
+			          <td><a href="#">履行中</a></td>
+			        </tr>
+			        <tr>
+			          <td><a href="#" class="go-detail">查看</a></td>
+			          <td>2015/09/09</td>
+			          <td>00012</td>
+			          <td>每日优鲜</td>
+			          <td>水果贷</td>
+			          <td>张三</td>
+			          <td><a href="#">履行完毕</a></td>
+			        </tr>
+			        <tr>
+			          <td><a href="#" class="go-detail">查看</a></td>
+			          <td>2015/09/09</td>
+			          <td>00012</td>
+			          <td>每日优鲜</td>
+			          <td>水果贷</td>
+			          <td>张三</td>
+			          <td><a href="#">已拒绝</a></td>
+			        </tr>
+			        <tr>
+			          <td><a href="#" class="go-detail">查看</a></td>
+			          <td>2015/09/09</td>
+			          <td>00012</td>
+			          <td>每日优鲜</td>
+			          <td>水果贷</td>
+			          <td>张三</td>
+			          <td><a href="#">已取消</a></td>
 			        </tr>
 			      </tbody>
 		      </table>
@@ -162,6 +209,6 @@
 <script src="../js/vendor/bootstrap.min.js"></script>
 <script src="../js/vendor/datetimepicker.min.js"></script>
 <script src="../js/vendor/bootstrap-datetimepicker.zh-CN.js"></script>
-<script src="../js/creditManage.js"></script>
+<script src="../js/creditRecord.js"></script>
 </body>
 </html>
