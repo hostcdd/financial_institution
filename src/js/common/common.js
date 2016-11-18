@@ -20,6 +20,8 @@ var URLOBJ = {
 		creditApproval: "./creditApproval.html",
 		//授信记录
 		creditRecord: "./creditRecord.html",
+		//授信审核详情
+		creditApprovalDetail: "./creditApprovalDetail.html",
 		//申请处理
 		financeManage: "./financeManage.html",
 		//协议审核
